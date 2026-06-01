@@ -1,0 +1,122 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #fde047; /* Bright Yellow */
+  --color-secondary: #0f2b23; /* Dark Green */
+  --color-grid: #e5e7eb;
+  
+  --border-thick: 3px solid var(--color-text);
+  --border-thin: 2px solid var(--color-text);
+  
+  --shadow-solid: 6px 6px 0px var(--color-text);
+  --shadow-solid-sm: 4px 4px 0px var(--color-text);
+  
+  --font-main: 'Inter', sans-serif;
+  --font-pixel: 'VT323', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Neo-Brutalist Utility Classes */
+.brutal-border {
+  border: var(--border-thick);
+}
+
+.brutal-shadow {
+  box-shadow: var(--shadow-solid);
+  transition: all 0.2s ease-in-out;
+}
+
+.brutal-shadow-sm {
+  box-shadow: var(--shadow-solid-sm);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Button hover effect */
+.brutal-btn {
+  border: var(--border-thick);
+  box-shadow: var(--shadow-solid);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+.brutal-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px var(--color-text);
+}
+
+.brutal-btn:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px var(--color-text);
+}
+
+/* Specific colors for buttons */
+.brutal-btn-primary {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+}
+
+.brutal-btn-primary:hover {
+  background-color: #333;
+}
+
+.brutal-card {
+  border: var(--border-thick);
+  box-shadow: var(--shadow-solid);
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+
+/* Typography utilities */
+.font-pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.05em;
+}
+
+.highlight-yellow {
+  background-color: var(--color-primary);
+  display: inline-block;
+  padding: 0 0.25rem;
+}
+
+/* Layout utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

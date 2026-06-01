@@ -1,0 +1,92 @@
+.contact-header {
+  background-color: var(--color-primary);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--color-bg);
+  text-decoration: none;
+  color: var(--color-text);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.brutal-hover:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--color-text);
+}
+
+.brutal-hover:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--color-text);
+}
+
+.contact-card-icon {
+  margin-right: 1.5rem;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkedin-card .contact-card-icon {
+  background-color: #0077b5;
+}
+
+.contact-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+}
+
+.contact-card-content p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #555;
+  word-break: break-all;
+}
+
+.contact-card-arrow {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  opacity: 0;
+  transform: translate(-10px, 10px);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover .contact-card-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
